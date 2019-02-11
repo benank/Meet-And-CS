@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600");
+#map {
+    height: 100%;
+    width: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+div.bitmoji
+{
+    background: white;
+    background-image: url('');
+    background-repeat: no-repeat, repeat;
+    background-position: center; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    width: 30px;
+    height: 30px;
+    border: 2px solid red;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 500px;
+    position: fixed;
+}
+
+div.title
+{
+    position: fixed;
+    top: 30%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    border: 2px solid white;
+    font-family: 'Abel';
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-weight: bold;
+    z-index: 9;
+    font-size: 40px;
+    padding: 10px;
+    cursor: pointer;
+}

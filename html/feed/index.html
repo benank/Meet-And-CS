@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <title>Your Feed</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+      
+    <script src="../lib/socket.io.js"></script>
+    <script src="../lib/jquery.js"></script>
+    <script src="../common/redirect.js"></script>
+    <script>
+    
+    </script>
+    <script src="feed.js"></script>
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="../materialize/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="../materialize/css/materialize.min.css"  media="screen,projection"/>
+</head> 
+    
+<body> 
+
+    
+    <nav>
+      <div class="nav-wrapper">
+        <a href="../index.html" class="brand-logo"><img src="https://i.imgur.com/1GDbmus.png" alt="Logo" width="70" height="50"></a>
+        <a href="../index.html" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="../feed/">Feed</a></li>
+          <li><a href="../map/">Map</a></li>
+          <li><a href="../profile/">Profile</a></li>
+          <li><a href="../messages/">Messages</a></li>
+          <li><a href="meetups.html">Meetups</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html">Feed</a></li>
+        <li><a href="map.html">Map</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="messages.html">Messages</a></li>
+        <li><a href="meetups.html">Meetups</a></li>
+    </ul>
+
+    <div id="gradient"></div>
+
+<center><h1 id="title-welcome">Welcome back!</h1></center>
+
+<div id="flex-container">
+  <div class="flex-item">
+    <h2>Study</h2>
+    <div class='feed-area study'>
+    </div> 
+  </div>
+  <div class="flex-item">
+    <h2>Get Help</h2>
+    <div class='feed-area gethelp'>
+    </div>
+  </div>
+  <div class="flex-item">
+    <h2>Socialize</h2>
+    <div class='feed-area socialize'>
+    </div>
+  </div>
+</div>
+
+<a class="btn-floating btn-large waves-effect waves-light red newpost" id="newpostbtn"><i class="material-icons">add</i></a>
+
+
+
+<div id="myModal" class="modal">
+    
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h1>New Post</h1>
+        
+      <form>
+            Title:
+            <input type="text" id="titleinput" title="title"><br>
+                    
+        <p>Category:
+            <select class="options">
+                <option value="default">Choose...</option>
+                <option value="studying">Studying</option>
+                <option value ="help">Help</option>
+                <option value="social">Social</option>
+            </select>
+        </p>
+        <p>Date: <input type="text" date="date" placeholder="2/10/19"></p>
+        <p>Start Time: <input type="text" id="starttime" stime="stime" placeholder="12:00 PM"></p>
+        <p>End Time: <input type="text" id="endtime" etime="etime" placeholder="1:00 PM"><br></p>
+
+        
+        <p>Description: <br><textarea rows="10" id="description" cols="72.5" style="float: left"></textarea><br></p>    
+        <p>Location:</p>
+        <div style="float: right; width: 400px; height: 300px; padding: 1em;">
+          <div id='map'>
+          </div>
+        </div>
+            
+        </form>
+        
+        <br><br><br><br><br>
+        <button id="submitButton" class="btn waves-effect waves-light" type="submit" name="action">Submit
+          <i class="material-icons right">send</i>
+        </button>
+
+    </div>
+</div>
+  
+  <script type="text/javascript" src="../materialize/js/materialize.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=GOOGLE_MAPS_API_KEY&callback=initMap2"
+        async defer></script>
+</body>
+      
+</html>

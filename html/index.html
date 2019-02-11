@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+  <title>Meet and CS</title>
+  <link rel="stylesheet" href="./login/about.css">
+<!--   <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+ -->  
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="./lib/jquery.js"></script>
+  <script src="./lib/socket.io.js"></script>
+  <script src="common/redirect.js"></script>
+  <script src="./login/login.js"></script>
+</head>
+    
+<body>
+
+<div class="title text-center" style="user-select: none;">
+  <font color="white">
+    <h1>Meet and CS</h1>
+    <p>Find project partners. Study. Socialize.</p> 
+  </font>
+  
+</div>
+
+<div class="container">
+  <div class="overlay"></div>
+  <video autoplay muted loop id="myVideo">
+    <source src="https://www.meetup.com/mu_static/en-US/video.dddafbfe.mp4" type="video/mp4">
+  </video>
+</div>
+  
+<div id="container">
+    
+  <div id="login-button"></div>
+    <div id="profile" class="hidden">
+      <img id="picture" src="#" />
+      <p id="welcome">Welcome!</p>
+    </div>
+</div>
+</body>
+
+</html>

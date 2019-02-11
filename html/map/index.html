@@ -1,0 +1,50 @@
+
+<html>
+    <script src="../lib/socket.io.js"></script>
+    <script src="../lib/jquery.js"></script>
+    <script src="../common/redirect.js"></script>
+    <script src="map.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="map.css">
+    <link type="text/css" rel="stylesheet" href="../materialize/css/materialize.min.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../materialize/css/materialize.min.css"  media="screen,projection"/>
+    
+    <nav>
+        <div class="nav-wrapper">
+          <a href="../index.html" class="brand-logo"><img src="https://i.imgur.com/1GDbmus.png" alt="Logo" width="70" height="50"></a>
+          <a href="../index.html" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="../feed/">Feed</a></li>
+            <li><a href="../map/">Map</a></li>
+            <li><a href="../profile/">Profile</a></li>
+            <li><a href="../messages/">Messages</a></li>
+            <li><a href="meetups.html">Meetups</a></li>
+          </ul>
+        </div>
+      </nav>
+  
+      <ul class="sidenav" id="mobile-demo">
+          <li><a href="index.html">Feed</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="messages.html">Messages</a></li>
+          <li><a href="meetups.html">Meetups</a></li>
+      </ul>
+  
+      <div id="gradient"></div>
+  
+  <body>
+    <div class='title'>People Near You</div>
+    <div id="map"></div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=GOOGLE_MAPS_API_KEY&callback=initMap"
+        async defer></script>
+  </body>
+    
+</html>
